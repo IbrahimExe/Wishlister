@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "461466064770",
+    "project_id": "game-wishlister-app",
+    "storage_bucket": "game-wishlister-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:461466064770:android:27c746e6f6a4e04701619b",
+        "android_client_info": {
+          "package_name": "com.example.gamewishlister_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwH1A1jzKAHr7GpvmYaXC1ac0t-FeIjNw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
