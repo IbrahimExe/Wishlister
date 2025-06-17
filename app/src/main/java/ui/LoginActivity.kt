@@ -2,6 +2,7 @@ package com.example.gamewishlister_app.ui
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.gamewishlister_app.YourGamesActivity
 import com.example.gamewishlister_app.databinding.LoginLayoutBinding
@@ -20,6 +21,16 @@ class LoginActivity : AppCompatActivity() {
 
         // Initialize Firebase Auth
         auth = FirebaseAuth.getInstance()
+        // Sign in anonymously immediately:
+        auth.signInAnonymously()
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    // now we have a non-null auth.currentUser.uid
+                    Toast.makeText(this, "Signed in Annonymously.", Toast.LENGTH_SHORT).show()
+                } else {
+                    //Toast.makeText(this, "Authentication failed.", Toast.LENGTH_SHORT).show()
+                }
+            }
 
         binding.btnSteamLogin.setOnClickListener { goToMain() }
 
