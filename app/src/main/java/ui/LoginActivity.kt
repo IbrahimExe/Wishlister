@@ -1,23 +1,21 @@
 package com.example.gamewishlister_app.ui
 
-import com.example.gamewishlister_app.R
 import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import com.example.gamewishlister_app.databinding.ActivityLoginBinding
-import com.google.firebase.auth.FirebaseAuth
 import com.example.gamewishlister_app.YourGamesActivity
+import com.example.gamewishlister_app.databinding.LoginLayoutBinding
+import com.google.firebase.auth.FirebaseAuth
 
 class LoginActivity : AppCompatActivity() {
 
     private lateinit var auth: FirebaseAuth
-    private lateinit var binding: ActivityLoginBinding
+    private lateinit var binding: LoginLayoutBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // Initialize View Binding
-        binding = ActivityLoginBinding.inflate(layoutInflater)
+        binding = LoginLayoutBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         // Initialize Firebase Auth
@@ -28,7 +26,7 @@ class LoginActivity : AppCompatActivity() {
         binding.btnEmailLogin.setOnClickListener { goToMain() }
 
         binding.btnNativeLogin.setOnClickListener { goToMain() }
-        
+
     }
 
     private fun goToMain() {
