@@ -9,6 +9,7 @@ import com.example.gamewishlister_app.model.Game
 import com.example.gamewishlister_app.ui.GameAdapter
 import com.example.gamewishlister_app.ui.LoginActivity
 import com.example.gamewishlister_app.ui.SearchGamesActivity
+import com.example.gamewishlister_app.ui.GameDetailActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 
@@ -25,10 +26,16 @@ class YourGamesActivity : AppCompatActivity() {
         binding = YourgamesLayoutBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // 2. RecyclerView + Adapter (empty list for now)
+        // 2. RecyclerView + Adapter
         adapter = GameAdapter(mutableListOf()) { game ->
-            // TODO: Launch your GameDetailActivity here, passing 'game'
+            // When a game card is tapped, open GameDetailActivity
+            val intent = Intent(this, GameDetailActivity::class.java).apply {
+                putExtra("GAME_ID", game.id)
+                putExtra("GAME_NAME", game.name)
+            }
+            startActivity(intent)
         }
+
         binding.rvGames.layoutManager = GridLayoutManager(this, 2)
         binding.rvGames.adapter = adapter
 

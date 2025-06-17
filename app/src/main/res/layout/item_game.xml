@@ -5,15 +5,29 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
-    card_view:cardCornerRadius="8dp"
-    card_view:cardElevation="4dp">
+    card_view:cardBackgroundColor="#AA000000"
+    card_view:cardCornerRadius="12dp"
+    card_view:cardElevation="6dp">
+
+    <ImageView
+        android:id="@+id/imgPlayedSmall"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/controller_symbol"
+        card_view:tint="@color/white" />
 
     <TextView
         android:id="@+id/tvGameName"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:gravity="center_vertical|center_horizontal"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:gravity="center"
+        android:padding="8dp"
         android:text="Game Title"
-        android:textSize="18sp"
-        android:padding="8dp"/>
+        android:textColor="@color/white"
+        android:textSize="20dp" />
 </androidx.cardview.widget.CardView>
+

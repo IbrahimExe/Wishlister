@@ -7,22 +7,25 @@
     android:orientation="vertical"
     android:padding="24dp"
     android:gravity="center"
-    android:background="@android:color/white">
+    android:background="@drawable/steam_gradient">
 
     <!-- App logo or title -->
     <TextView
         android:id="@+id/tvLoginTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="48dp"
         android:text="Game Wishlister"
+        android:textColor="#FDFBFB"
         android:textSize="32sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="48dp"/>
+        android:textStyle="bold" />
 
     <!-- Steam login button (visual stub) -->
     <Button
         android:id="@+id/btnSteamLogin"
         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:backgroundTint="@color/steam_accent"
+        android:textColor="@color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Connect with Steam"
@@ -32,6 +35,8 @@
     <Button
         android:id="@+id/btnEmailLogin"
         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:backgroundTint="@color/steam_accent"
+        android:textColor="@color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Sign in with Email"
@@ -41,6 +46,8 @@
     <Button
         android:id="@+id/btnNativeLogin"
         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:backgroundTint="@color/steam_accent"
+        android:textColor="@color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Use Wishlister Account"/>

@@ -3,6 +3,7 @@ package com.example.gamewishlister_app.ui
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.gamewishlister_app.R
 import com.example.gamewishlister_app.databinding.ItemGameBinding
 import com.example.gamewishlister_app.model.Game
 
@@ -15,6 +16,13 @@ class GameAdapter(
         : RecyclerView.ViewHolder(binding.root) {
         fun bind(game: Game) {
             binding.tvGameName.text = game.name
+            val playedTint = if (game.played) {
+                binding.root.context.getColor(R.color.steam_accent)
+            } else {
+                binding.root.context.getColor(R.color.white)
+            }
+            binding.imgPlayedSmall.setColorFilter(playedTint)
+
             binding.root.setOnClickListener { onClick(game) }
         }
     }
