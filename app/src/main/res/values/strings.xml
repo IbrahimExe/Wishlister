@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">GameWishlister_App</string>
+    <string name="title_activity_your_games">YourGamesActivity</string>
 </resources>
