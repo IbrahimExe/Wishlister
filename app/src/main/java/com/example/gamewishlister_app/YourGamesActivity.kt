@@ -76,13 +76,15 @@ class YourGamesActivity : AppCompatActivity() {
                 val gamesList = mutableListOf<Game>()
                 snapshot.children.forEach { child ->
                     child.getValue(Game::class.java)?.let { game ->
-                        gamesList.add(game)
+                        // ← this is where we filter
+                        if (game.id.isNotBlank() && game.name.isNotBlank()) {
+                            gamesList.add(game)
+                        }
                     }
                 }
                 // Update adapter with the fetched list
                 adapter.setItems(gamesList)
             }
-
             override fun onCancelled(error: DatabaseError) {
                 // TODO: handle error (e.g., show a Toast)
             }

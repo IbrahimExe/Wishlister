@@ -56,6 +56,7 @@ class GameDetailActivity : AppCompatActivity()
         // 7) Remove button
         binding.btnRemove.setOnClickListener {
             removeGame()
+         // removeGameFromCollection(gameId)
         }
     }
 
@@ -132,5 +133,18 @@ class GameDetailActivity : AppCompatActivity()
             .addOnFailureListener {
                 Toast.makeText(this, "Could not remove game", Toast.LENGTH_SHORT).show()
             }
+    }
+
+    private fun removeGameFromCollection(gameId: String) {
+        val userId = FirebaseAuth.getInstance().currentUser?.uid ?: return
+        val gameRef = FirebaseDatabase.getInstance().getReference("users/$userId/games/$gameId")
+
+        // Remove the game entry, including review and played status
+        gameRef.removeValue().addOnSuccessListener {
+            Toast.makeText(this, "Game removed from your collection.", Toast.LENGTH_SHORT).show()
+            finish() // Close the detail screen and return
+        }.addOnFailureListener {
+            Toast.makeText(this, "Failed to remove game.", Toast.LENGTH_SHORT).show()
+        }
     }
 }
