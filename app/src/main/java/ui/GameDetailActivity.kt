@@ -90,15 +90,63 @@ class GameDetailActivity : AppCompatActivity()
     }
 
     private fun bindGameData() {
-        // a) Icon tint: green if played, white otherwise
+        // Set game name
+        binding.tvDetailGameName.text = currentGame.name
+
+        // Set review text (if available)
+        binding.etReview.setText(currentGame.review ?: "")
+
+        // Tint toggle icon
         val tintColor = if (currentGame.played)
             getColor(R.color.steam_accent)
         else
             getColor(R.color.white)
         binding.imgPlayedToggle.setColorFilter(tintColor)
 
-        // b) Current review
-        binding.etReview.setText(currentGame.review)
+        // Set the background image just like in GameAdapter.kt:
+        val imageRes = when (currentGame.id) {
+            "1" -> R.drawable.cyberpunk2077
+            "2" -> R.drawable.eldenring
+            "3" -> R.drawable.hades
+            "4" -> R.drawable.minecraft
+            "5" -> R.drawable.stardewvalley
+            "6" -> R.drawable.godofwar
+            "7" -> R.drawable.hollowknight
+            "8" -> R.drawable.celeste
+            "9" -> R.drawable.doometernal
+            "10" -> R.drawable.thewitcher3
+            "11" -> R.drawable.helldivers2
+            "12" -> R.drawable.repo
+            "13" -> R.drawable.subnautica
+            "14" -> R.drawable.marvelrivals
+            "15" -> R.drawable.expedition33
+            "16" -> R.drawable.deltarune
+            "17" -> R.drawable.destiny2
+            "18" -> R.drawable.overwatch2
+            "19" -> R.drawable.blueprince
+            "20" -> R.drawable.unless
+            "21" -> R.drawable.balatro
+            "22" -> R.drawable.outlast
+            "23" -> R.drawable.buldursgate3
+            "24" -> R.drawable.valorant
+            "25" -> R.drawable.rainbowsixsiege
+            "26" -> R.drawable.residentevilvillage
+            "27" -> R.drawable.sekiro
+            "29" -> R.drawable.reddeadredemption2
+            "37" -> R.drawable.spiderman
+            "38" -> R.drawable.oriandthewillofthewisps
+            "40" -> R.drawable.marioodyssey
+            "42" -> R.drawable.cuphead
+            "54" -> R.drawable.papersplease
+            "57" -> R.drawable.thebindingofisaac
+            "64" -> R.drawable.riskofrain2
+            "97" -> R.drawable.factorio
+            "98" -> R.drawable.satisfactory
+
+            else -> R.drawable.placeholderart
+        }
+        // Set it as the background image
+        binding.imgCoverFull.setImageResource(imageRes)
     }
 
     private fun togglePlayed() {
