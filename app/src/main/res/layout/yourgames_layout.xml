@@ -13,29 +13,60 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:src="@drawable/ic_baseline_account_circle_24"
+        android:tint="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- “Search Games” button -->
-    <Button
-        android:id="@+id/btnSearchGames"
-        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+    <!-- Collection Heading -->
+    <TextView
+        android:id="@+id/tvYourCollection"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Search Games"
+        android:text="Your Collection"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"/>
 
-    <!-- RecyclerView for game grid -->
+    <!-- Search Games Button -->
+    <Button
+        android:id="@+id/btnSearchGames"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search Games"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/steam_accent"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@id/tvYourCollection"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <!-- Empty message if no games -->
+    <TextView
+        android:id="@+id/tvEmptyMessage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="You have nothing in your collection!\nAdd games by searching for them."
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@id/btnSearchGames"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Game Grid -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvGames"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:clipToPadding="false"
-        app:layout_constraintTop_toBottomOf="@id/btnSearchGames"
+        android:paddingTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tvEmptyMessage"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:paddingTop="16dp"/>
+        app:layout_constraintEnd_toEndOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,6 +2,8 @@ package com.example.gamewishlister_app
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.gamewishlister_app.databinding.YourgamesLayoutBinding
@@ -73,6 +75,7 @@ class YourGamesActivity : AppCompatActivity() {
     private fun loadUserGames() {
         userGamesRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
+                // Gather games from Firebase into a list
                 val gamesList = mutableListOf<Game>()
                 snapshot.children.forEach { child ->
                     child.getValue(Game::class.java)?.let { game ->
@@ -84,9 +87,14 @@ class YourGamesActivity : AppCompatActivity() {
                 }
                 // Update adapter with the fetched list
                 adapter.setItems(gamesList)
+
+                binding.tvEmptyMessage.visibility =
+                    if (gamesList.isEmpty()) View.VISIBLE else View.GONE
             }
+
             override fun onCancelled(error: DatabaseError) {
                 // TODO: handle error (e.g., show a Toast)
+                Toast.makeText(this@YourGamesActivity, "Error loading games", Toast.LENGTH_SHORT).show()
             }
         })
     }
