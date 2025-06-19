@@ -19,6 +19,15 @@ class LoginActivity : AppCompatActivity() {
         binding = LoginLayoutBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // Animation fade-in for the title
+        binding.tvLoginTitle.alpha = 0f
+        binding.tvLoginTitle
+            .animate()
+            .alpha(1f)
+            .setDuration(1000)      // fade‑in over 0.8 seconds
+            .setStartDelay(500)    // wait 0.3 seconds before starting
+            .start()
+
         // Initialize Firebase Auth
         auth = FirebaseAuth.getInstance()
         // Sign in anonymously immediately:

@@ -9,47 +9,68 @@
     android:gravity="center"
     android:background="@drawable/steam_gradient">
 
-    <!-- App logo or title -->
+    <!-- Wishlister Logo/Title -->
     <TextView
         android:id="@+id/tvLoginTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="48dp"
-        android:text="Game Wishlister"
-        android:textColor="#FDFBFB"
-        android:textSize="32sp"
-        android:textStyle="bold" />
+        android:text="Wishlister"
+        android:textColor="@color/white"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.1"
+        android:shadowColor="@android:color/black"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4"
+        android:layout_marginBottom="64dp"/>
 
     <!-- Steam login button (visual stub) -->
     <Button
         android:id="@+id/btnSteamLogin"
-        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-        android:backgroundTint="@color/steam_accent"
-        android:textColor="@color/white"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="56dp"
+        android:layout_marginBottom="16dp"
+
+        android:background="@drawable/rounded_button"
+        android:backgroundTintMode="multiply"
+        android:fontFamily="sans-serif-medium"
+        android:insetLeft="16dp"
+        android:insetRight="16dp"
         android:text="Connect with Steam"
-        android:layout_marginBottom="16dp"/>
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
 
     <!-- Email login button -->
     <Button
         android:id="@+id/btnEmailLogin"
-        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-        android:backgroundTint="@color/steam_accent"
-        android:textColor="@color/white"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="56dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/steam_accent"
         android:text="Sign in with Email"
-        android:layout_marginBottom="16dp"/>
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif-medium"
+        android:insetLeft="16dp"
+        android:insetRight="16dp"
+        android:background="@drawable/rounded_button"/>
 
-    <!-- Native account (just placeholder) -->
+    <!-- Native Wishlister account button -->
     <Button
         android:id="@+id/btnNativeLogin"
-        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-        android:backgroundTint="@color/steam_accent"
-        android:textColor="@color/white"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Use Wishlister Account"/>
+        android:layout_height="56dp"
+        android:backgroundTint="@color/steam_accent"
+        android:text="Use Wishlister Account"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif-medium"
+        android:insetLeft="16dp"
+        android:insetRight="16dp"
+        android:background="@drawable/rounded_button"/>
 
 </LinearLayout>
