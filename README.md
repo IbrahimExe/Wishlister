@@ -1,5 +1,4 @@
 # 🎮 Wishlister
- designed for gamers to track, rate, review, and discuss games they've played / would like to play, be it indie or AAA!.
 
 **Wishlister** is a sleek, Steam‑themed mobile app built with **Kotlin** and **Android Studio**, A cataloging app designed for gamers to track, rate, and review their personal game collection, played or soon to be, AAA or indie!  
 > ⚠️ *This is a student project to practice Kotlin, Firebase, and Android UI/UX.*
