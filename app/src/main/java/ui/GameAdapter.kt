@@ -19,7 +19,7 @@ class GameAdapter(
 
             // Mapping game.id or game.name to its drawable resource:
             val imageRes = when (game.id) {
-                "1" -> R.drawable.cyberpunk2077
+                "1" -> R.drawable.unless
                 "2" -> R.drawable.eldenring
                 "3" -> R.drawable.hades
                 "4" -> R.drawable.minecraft
@@ -38,7 +38,7 @@ class GameAdapter(
                 "17" -> R.drawable.destiny2
                 "18" -> R.drawable.overwatch2
                 "19" -> R.drawable.blueprince
-                "20" -> R.drawable.unless
+                "20" -> R.drawable.cyberpunk2077
                 "21" -> R.drawable.balatro
                 "22" -> R.drawable.outlast
                 "23" -> R.drawable.buldursgate3

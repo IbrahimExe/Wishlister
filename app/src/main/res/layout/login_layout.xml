@@ -14,16 +14,17 @@
         android:id="@+id/tvLoginTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Wishlister"
-        android:textColor="@color/white"
-        android:textSize="48sp"
-        android:textStyle="bold"
+        android:layout_marginBottom="64dp"
+        android:fontFamily="sans-serif-smallcaps"
         android:letterSpacing="0.1"
         android:shadowColor="@android:color/black"
         android:shadowDx="2"
         android:shadowDy="2"
         android:shadowRadius="4"
-        android:layout_marginBottom="64dp"/>
+        android:text="Wishlister"
+        android:textColor="@color/white"
+        android:textSize="56sp"
+        android:textStyle="bold" />
 
     <!-- Steam login button (visual stub) -->
     <Button
@@ -31,16 +32,14 @@
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:layout_marginBottom="16dp"
-
-        android:background="@drawable/rounded_button"
-        android:backgroundTintMode="multiply"
-        android:fontFamily="sans-serif-medium"
+        android:backgroundTint="@color/steam_accent"
+        android:fontFamily="sans-serif-condensed-medium"
         android:insetLeft="16dp"
         android:insetRight="16dp"
         android:text="Connect with Steam"
         android:textAllCaps="false"
         android:textColor="@color/white"
-        android:textSize="16sp" />
+        android:textSize="18sp" />
 
     <!-- Email login button -->
     <Button
@@ -49,14 +48,13 @@
         android:layout_height="56dp"
         android:layout_marginBottom="16dp"
         android:backgroundTint="@color/steam_accent"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:insetLeft="16dp"
+        android:insetRight="16dp"
         android:text="Sign in with Email"
         android:textAllCaps="false"
         android:textColor="@color/white"
-        android:textSize="16sp"
-        android:fontFamily="sans-serif-medium"
-        android:insetLeft="16dp"
-        android:insetRight="16dp"
-        android:background="@drawable/rounded_button"/>
+        android:textSize="18sp" />
 
     <!-- Native Wishlister account button -->
     <Button
@@ -64,13 +62,12 @@
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:backgroundTint="@color/steam_accent"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:insetLeft="16dp"
+        android:insetRight="16dp"
         android:text="Use Wishlister Account"
         android:textAllCaps="false"
         android:textColor="@color/white"
-        android:textSize="16sp"
-        android:fontFamily="sans-serif-medium"
-        android:insetLeft="16dp"
-        android:insetRight="16dp"
-        android:background="@drawable/rounded_button"/>
+        android:textSize="18sp" />
 
 </LinearLayout>
