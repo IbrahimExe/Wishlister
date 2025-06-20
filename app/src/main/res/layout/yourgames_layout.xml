@@ -12,7 +12,7 @@
         android:id="@+id/imgProfile"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:src="@drawable/ic_baseline_account_circle_24"
         android:tint="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,7 +23,7 @@
         android:id="@+id/tvYourCollection"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:fontFamily="sans-serif-black"
         android:text="Your Collection"
         android:textColor="@color/white"
@@ -39,9 +39,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:backgroundTint="@color/steam_accent"
-        android:fontFamily="sans-serif-condensed-medium"
+        android:fontFamily="sans-serif-medium"
         android:text="Search Games"
         android:textColor="@color/white"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvYourCollection" />
 
@@ -50,15 +51,16 @@
         android:id="@+id/tvEmptyMessage"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="You have nothing in your collection!\nAdd games by searching for them."
-        android:textColor="@color/white"
-        android:textSize="16sp"
+        android:layout_marginTop="60dp"
+        android:fontFamily="sans-serif-condensed-light"
         android:gravity="center"
+        android:text="You have nothing in your collection!\nAdd games by searching for them!"
+        android:textColor="@color/white"
+        android:textSize="20sp"
         android:visibility="gone"
-        android:layout_marginTop="24dp"
-        app:layout_constraintTop_toBottomOf="@id/btnSearchGames"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/btnSearchGames" />
 
     <!-- Game Grid -->
     <androidx.recyclerview.widget.RecyclerView
