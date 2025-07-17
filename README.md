@@ -1,4 +1,10 @@
-# 🎮 Wishlister
+<div align="center">
+
+<img width="100" height="100" alt="steam_logo_icon_206670" src="https://github.com/user-attachments/assets/9dca680b-0607-42ca-9852-03df82d3caae" />
+  
+# 📱 Wishlister 📱
+
+</div>
 
 **Wishlister** is a sleek, Steam‑themed mobile app built with **Kotlin** and **Android Studio**, A cataloging app designed for gamers to track, rate, and review their personal game collection, played or soon to be, AAA or indie!
 > ⚠️ *This is a student project built entirely from scratch to practice Kotlin, Firebase integration, and Android UI/UX design. While it reuses some core concepts I learned during my [To Do List App](https://github.com/IbrahimExe/Kotlin_ToDoList_App) project, the Wishlister app was developed independently from the ground up!*
